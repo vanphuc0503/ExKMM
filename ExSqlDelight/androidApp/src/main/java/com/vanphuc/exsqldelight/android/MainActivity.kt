@@ -1,87 +1,65 @@
 package com.vanphuc.exsqldelight.android
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.vanphuc.exsqldelight.Greeting
+import android.widget.FrameLayout
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.vanphuc.exsqldelight.SpaceXSDK
+import com.vanphuc.exsqldelight.cache.DatabaseDriverFactory
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.launch
 
-@Composable
-fun MyApplicationTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit
-) {
-    val colors = if (darkTheme) {
-        darkColors(
-            primary = Color(0xFFBB86FC),
-            primaryVariant = Color(0xFF3700B3),
-            secondary = Color(0xFF03DAC5)
-        )
-    } else {
-        lightColors(
-            primary = Color(0xFF6200EE),
-            primaryVariant = Color(0xFF3700B3),
-            secondary = Color(0xFF03DAC5)
-        )
-    }
-    val typography = Typography(
-        body1 = TextStyle(
-            fontFamily = FontFamily.Default,
-            fontWeight = FontWeight.Normal,
-            fontSize = 16.sp
-        )
-    )
-    val shapes = Shapes(
-        small = RoundedCornerShape(4.dp),
-        medium = RoundedCornerShape(4.dp),
-        large = RoundedCornerShape(0.dp)
-    )
+class MainActivity : AppCompatActivity() {
+    private val mainScope = MainScope()
+    private lateinit var launchesRecyclerView: RecyclerView
+    private lateinit var progressBarView: FrameLayout
+    private lateinit var swipeRefreshLayout: SwipeRefreshLayout
+    private val launchesRvAdapter = LaunchesRvAdapter(listOf())
+    private val sdk = SpaceXSDK(DatabaseDriverFactory(this))
 
-    MaterialTheme(
-        colors = colors,
-        typography = typography,
-        shapes = shapes,
-        content = content
-    )
-}
-
-class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            MyApplicationTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting(Greeting().greeting())
-                }
+
+        title = "SpaceX Launches"
+        setContentView(R.layout.activity_main)
+
+        launchesRecyclerView = findViewById(R.id.launchesListRv)
+        progressBarView = findViewById(R.id.progressBar)
+        swipeRefreshLayout = findViewById(R.id.swipeContainer)
+
+        launchesRecyclerView.adapter = launchesRvAdapter
+        launchesRecyclerView.layoutManager = LinearLayoutManager(this)
+
+        swipeRefreshLayout.setOnRefreshListener {
+            swipeRefreshLayout.isRefreshing = false
+            displayLaunches(true)
+        }
+
+        displayLaunches(false)
+    }
+
+    private fun displayLaunches(needReload: Boolean) {
+        progressBarView.isVisible = true
+        mainScope.launch {
+            kotlin.runCatching {
+                sdk.getLaunches(needReload)
+            }.onSuccess {
+                launchesRvAdapter.launches = it
+                launchesRvAdapter.notifyDataSetChanged()
+            }.onFailure {
+                Toast.makeText(this@MainActivity, it.localizedMessage, Toast.LENGTH_SHORT).show()
             }
+            progressBarView.isVisible = false
         }
     }
-}
 
-@Composable
-fun Greeting(text: String) {
-    Text(text = text)
-}
-
-@Preview
-@Composable
-fun DefaultPreview() {
-    MyApplicationTheme {
-        Greeting("Hello, Android!")
+    override fun onDestroy() {
+        super.onDestroy()
+        mainScope.cancel()
     }
 }

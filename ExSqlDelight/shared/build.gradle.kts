@@ -83,6 +83,6 @@ android {
 
 sqldelight {
     database("AppDatabase") {
-        packageName = "com.vanphuc.exsqldelight.shared.cache"
+        packageName = "com.vanphuc.exsqldelight.cache"
     }
 }
