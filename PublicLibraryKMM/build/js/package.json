@@ -1,0 +1,20 @@
+{
+  "name": "PublicLibraryKMM",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages\\PublicLibraryKMM-js-legacy",
+    "packages\\PublicLibraryKMM-js-legacy-test",
+    "packages\\PublicLibraryKMM-js-ir",
+    "packages\\PublicLibraryKMM-js-ir-test",
+    "packages_imported\\kotlin-test-js-runner\\1.7.10",
+    "packages_imported\\kotlin\\1.7.10",
+    "packages_imported\\kotlin-test\\1.7.10"
+  ],
+  "resolutions": {},
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

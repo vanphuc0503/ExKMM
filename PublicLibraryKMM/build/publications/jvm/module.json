@@ -1,0 +1,91 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../PublicLibraryKMM/1.0.0/PublicLibraryKMM-1.0.0.module",
+    "group": "me.nvphuc2",
+    "module": "PublicLibraryKMM",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "PublicLibraryKMM-jvm-1.0.0.jar",
+          "url": "PublicLibraryKMM-jvm-1.0.0.jar",
+          "size": 4271,
+          "sha512": "f45afb7eb3e882fa66f639d1210f6a4c92a62cac32e8f4dc8eee9c71ef131f762c555953c343068a69ac5523dcea043440699a396390f7c2ca39a03519b7e821",
+          "sha256": "d002b44476ff265b3db78f795c91206aa5f99e4cb57d9180f6598710962662fa",
+          "sha1": "2b2d399a549ba59c1e1b306c532a622c63f5b761",
+          "md5": "745a08e26d2e97b575a6f93af37a0eb9"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "PublicLibraryKMM-jvm-1.0.0.jar",
+          "url": "PublicLibraryKMM-jvm-1.0.0.jar",
+          "size": 4271,
+          "sha512": "f45afb7eb3e882fa66f639d1210f6a4c92a62cac32e8f4dc8eee9c71ef131f762c555953c343068a69ac5523dcea043440699a396390f7c2ca39a03519b7e821",
+          "sha256": "d002b44476ff265b3db78f795c91206aa5f99e4cb57d9180f6598710962662fa",
+          "sha1": "2b2d399a549ba59c1e1b306c532a622c63f5b761",
+          "md5": "745a08e26d2e97b575a6f93af37a0eb9"
+        }
+      ]
+    }
+  ]
+}

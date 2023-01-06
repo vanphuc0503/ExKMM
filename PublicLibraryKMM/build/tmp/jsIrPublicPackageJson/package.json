@@ -1,0 +1,11 @@
+{
+  "name": "PublicLibraryKMM-js-ir",
+  "version": "1.0.0-SNAPSHOT",
+  "main": "PublicLibraryKMM-js-ir.js",
+  "types": "PublicLibraryKMM-js-ir.d.ts",
+  "devDependencies": {},
+  "dependencies": {},
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
+}

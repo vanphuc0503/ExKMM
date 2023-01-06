@@ -1,0 +1,152 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "me.nvphuc2",
+    "module": "PublicLibraryKMM",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "PublicLibraryKMM-metadata-1.0.0.jar",
+          "url": "PublicLibraryKMM-1.0.0.jar",
+          "size": 3390,
+          "sha512": "b021fb7905518df98893fea352791aae90552e6c054ce20cb9320e7b80fa282f10adae1f7a6fe2bc537bc448d95a3b6febfbae5f8fc1349121092918fb8fe858",
+          "sha256": "ecb462e745915b73b8c5839419764941184c3fec014de4a7d4fe288a198218af",
+          "sha1": "bd0f0d267fa61d31693589e82d34c6fb77577900",
+          "md5": "d8ea3961630791701940f1cf4a504184"
+        }
+      ]
+    },
+    {
+      "name": "jsLegacyApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "legacy",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../PublicLibraryKMM-js/1.0.0/PublicLibraryKMM-js-1.0.0.module",
+        "group": "me.nvphuc2",
+        "module": "PublicLibraryKMM-js",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "name": "jsLegacyRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "legacy",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../PublicLibraryKMM-js/1.0.0/PublicLibraryKMM-js-1.0.0.module",
+        "group": "me.nvphuc2",
+        "module": "PublicLibraryKMM-js",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "name": "jsIrApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../PublicLibraryKMM-js/1.0.0/PublicLibraryKMM-js-1.0.0.module",
+        "group": "me.nvphuc2",
+        "module": "PublicLibraryKMM-js",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "name": "jsIrRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../PublicLibraryKMM-js/1.0.0/PublicLibraryKMM-js-1.0.0.module",
+        "group": "me.nvphuc2",
+        "module": "PublicLibraryKMM-js",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../PublicLibraryKMM-jvm/1.0.0/PublicLibraryKMM-jvm-1.0.0.module",
+        "group": "me.nvphuc2",
+        "module": "PublicLibraryKMM-jvm",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../PublicLibraryKMM-jvm/1.0.0/PublicLibraryKMM-jvm-1.0.0.module",
+        "group": "me.nvphuc2",
+        "module": "PublicLibraryKMM-jvm",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "name": "nativeApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../PublicLibraryKMM-native/1.0.0/PublicLibraryKMM-native-1.0.0.module",
+        "group": "me.nvphuc2",
+        "module": "PublicLibraryKMM-native",
+        "version": "1.0.0"
+      }
+    }
+  ]
+}

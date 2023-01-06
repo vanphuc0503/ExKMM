@@ -1,0 +1,49 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../PublicLibraryKMM/1.0.0/PublicLibraryKMM-1.0.0.module",
+    "group": "me.nvphuc2",
+    "module": "PublicLibraryKMM",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "nativeApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "PublicLibraryKMM.klib",
+          "url": "PublicLibraryKMM-native-1.0.0.klib",
+          "size": 12175,
+          "sha512": "cef3c6ccd57e1c52f97ddcf750316f5fd03512b3eaaef7743fd6b618dcbf5c0dd302218f0228ffd4e1ef0cfaf9517473ec2134d8076d8677cbc54b4488520582",
+          "sha256": "106ad72e24995fbc37a30e78955fe5da85089ee676a479be29067099cd9f66e5",
+          "sha1": "c62b6ad62d2f0f7cbb3da967cb2b883aa600900e",
+          "md5": "e595a323ef67ded7aaddf7da63f5980a"
+        }
+      ]
+    }
+  ]
+}

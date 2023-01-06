@@ -1,0 +1,163 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../PublicLibraryKMM/1.0.0/PublicLibraryKMM-1.0.0.module",
+    "group": "me.nvphuc2",
+    "module": "PublicLibraryKMM",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "jsLegacyApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "legacy",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-js",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "PublicLibraryKMM-jslegacy-1.0.0.jar",
+          "url": "PublicLibraryKMM-js-1.0.0.jar",
+          "size": 44326,
+          "sha512": "9ca49e5e6409c3916bf897131a1c7c5e1ce1a3dbf77532470bd09c4221ba423471f44f26fcd7fbb276f5cefb5ea3a1f9fa7e905f0da549a6145a9b2f1cbfebfb",
+          "sha256": "9dee44d7806dcf93a30e86b2d84481f4722ca928359a8ec5062a06ee71b21f64",
+          "sha1": "9f6729421ce9fe9790047fd2c51fd49a5f0e6bbd",
+          "md5": "ebf37033814bcdcf79a9fc1ef95bef91"
+        }
+      ]
+    },
+    {
+      "name": "jsLegacyRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "legacy",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-js",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "PublicLibraryKMM-jslegacy-1.0.0.jar",
+          "url": "PublicLibraryKMM-js-1.0.0.jar",
+          "size": 44326,
+          "sha512": "9ca49e5e6409c3916bf897131a1c7c5e1ce1a3dbf77532470bd09c4221ba423471f44f26fcd7fbb276f5cefb5ea3a1f9fa7e905f0da549a6145a9b2f1cbfebfb",
+          "sha256": "9dee44d7806dcf93a30e86b2d84481f4722ca928359a8ec5062a06ee71b21f64",
+          "sha1": "9f6729421ce9fe9790047fd2c51fd49a5f0e6bbd",
+          "md5": "ebf37033814bcdcf79a9fc1ef95bef91"
+        }
+      ]
+    },
+    {
+      "name": "jsIrApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-js",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "PublicLibraryKMM-jsir-1.0.0.klib",
+          "url": "PublicLibraryKMM-js-1.0.0.klib",
+          "size": 5488,
+          "sha512": "ff95cdcdf5222c4e79e79d5287545534a95b093af73b12127c6001d4e636ae230cd0c0a343b3bd493d8a390ac32fabea40240af80d438b1127d6d15b84a6d98c",
+          "sha256": "4b6ea9105daf2333a2e06b93c48a14877418d73d5e9585aaf8c1318fef7d8b9f",
+          "sha1": "2c054416bb1dd1316cbef947e6e83ec7a404f64c",
+          "md5": "d8c084341547fafbc05360efc84bba87"
+        }
+      ]
+    },
+    {
+      "name": "jsIrRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-js",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.7.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "PublicLibraryKMM-jsir-1.0.0.klib",
+          "url": "PublicLibraryKMM-js-1.0.0.klib",
+          "size": 5488,
+          "sha512": "ff95cdcdf5222c4e79e79d5287545534a95b093af73b12127c6001d4e636ae230cd0c0a343b3bd493d8a390ac32fabea40240af80d438b1127d6d15b84a6d98c",
+          "sha256": "4b6ea9105daf2333a2e06b93c48a14877418d73d5e9585aaf8c1318fef7d8b9f",
+          "sha1": "2c054416bb1dd1316cbef947e6e83ec7a404f64c",
+          "md5": "d8c084341547fafbc05360efc84bba87"
+        }
+      ]
+    }
+  ]
+}
