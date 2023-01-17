@@ -1,6 +1,7 @@
 package com.vanphuc.exsqldelight.android
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             swipeRefreshLayout.isRefreshing = false
             displayLaunches(true)
         }
+        Log.d("TEST", "MainActivity")
 
         displayLaunches(false)
     }
